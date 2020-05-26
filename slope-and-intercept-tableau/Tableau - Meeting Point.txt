@@ -1,0 +1,19 @@
+SCRIPT_REAL(
+
+"x <- .arg1
+ y <- .arg2
+ w <- .arg3
+ z <- .arg4
+
+ mod1 <- lm(y ~ x)
+ mod2 <- lm(z ~ w)
+ 
+ (mod2$coefficients[1] - mod1$coefficients[1]) /
+ (mod2$coefficients[2] - mod1$coefficients[2])" 
+
+, AVG(IF [Trendlines] = "T1" THEN [Running Speed]) END)
+, AVG(IF [Trendlines] = "T1" THEN [Lactate]) END)
+, AVG(IF [Trendlines] = "T2" THEN [Running Speed]) END)
+, AVG(IF [Trendlines] = "T2" THEN [Lactate]) END)
+
+)

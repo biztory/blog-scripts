@@ -1,0 +1,11 @@
+SCRIPT_REAL(
+
+"x <- .arg1
+ y <- .arg2
+ mod <- lm(y ~ x)
+ mod$coeff[[2]]" 
+
+, AVG([Running Speed])
+, AVG([Heart Rate])   
+
+)
