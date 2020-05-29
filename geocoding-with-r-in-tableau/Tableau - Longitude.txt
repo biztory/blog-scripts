@@ -1,0 +1,16 @@
+SCRIPT_REAL(
+
+"library(ggplot2)
+library(ggmap)
+
+loc <- geocode(
+    .arg1
+    , output = " latlon"
+    , source = "google"
+)
+
+loc$lon"
+
+, ATTR([Location])
+
+)
